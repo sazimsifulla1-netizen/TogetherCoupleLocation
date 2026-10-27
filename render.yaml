@@ -1,7 +1,11 @@
+# Together Couple Location — deploy this Blueprint after granting Render access to the private repository.
+# Uses the existing Render Postgres instance in the same Singapore workspace.
 services:
   - type: web
     name: together-couple-api
     runtime: node
+    plan: free
+    region: singapore
     rootDir: server
     buildCommand: npm install --omit=dev
     startCommand: npm start
@@ -10,9 +14,11 @@ services:
       - key: NODE_ENV
         value: production
       - key: DATABASE_URL
-        sync: false
+        fromDatabase:
+          name: together-couple-db
+          property: connectionString
       - key: DB_SSL
-        value: 'true'
+        value: 'false'
       - key: JWT_SECRET
         generateValue: true
       - key: INVITE_SECRET
