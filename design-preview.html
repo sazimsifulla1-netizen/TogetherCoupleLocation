@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="bn"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data: https://tile.openstreetmap.org; connect-src 'none'; form-action 'none'; frame-src 'none'; base-uri 'none'; object-src 'none'">
+<title>Together · Couple Location</title>
+<style>
+:root{--bg:#141126;--panel:#251E3F;--panel2:#30254E;--line:#493B67;--ink:#F9F4FF;--muted:#C4B7DC;--pink:#FD8EBE;--purple:#8963FD;--mint:#60EAB5;--red:#FF8F9A}*{box-sizing:border-box}html,body{height:100%;margin:0;background:var(--bg);color:var(--ink);font-family:Roboto,'Noto Sans Bengali',sans-serif;-webkit-tap-highlight-color:transparent}body{overflow-x:hidden}button,input{font:inherit}button{cursor:pointer;border:0;color:inherit}button:disabled{opacity:.55}.page{max-width:600px;min-height:100vh;margin:0 auto;padding:20px 18px 102px;background:radial-gradient(circle at 88% 0%,#362452 0%,transparent 37%),var(--bg)}.header{display:flex;align-items:center;justify-content:space-between;margin:4px 0 22px}.brand{font-weight:900;font-size:28px;letter-spacing:-.9px}.brand .heart{color:var(--pink)}.minor{color:var(--muted);font-size:12px}.round-icon{width:42px;height:42px;border-radius:16px;background:var(--panel2);display:flex;align-items:center;justify-content:center;font-size:23px}.hero{border:1px solid #54406F;background:linear-gradient(142deg,#38264F,#211A3A 63%);border-radius:24px;padding:19px;margin:0 0 16px;box-shadow:0 15px 48px #07051260}.hero-top,.flex{display:flex;justify-content:space-between;align-items:center;gap:10px}.avatar{width:49px;height:49px;border-radius:17px;background:linear-gradient(135deg,#9C6BFB,#F58ABA);display:flex;justify-content:center;align-items:center;font-size:25px}.partner-name{font-size:18px;font-weight:800;margin-bottom:4px}.status{font-size:12px;color:var(--mint);font-weight:700}.status.off{color:var(--red)}.label{font-size:12px;color:var(--muted);margin-bottom:5px}.hint{color:var(--muted);font-size:13px;line-height:1.65}.card{background:var(--panel);border:1px solid var(--line);border-radius:21px;padding:17px;margin:14px 0}.map{height:272px;position:relative;border-radius:17px;overflow:hidden;background:repeating-linear-gradient(40deg,#E5E8E5 0 25px,#D8E1DA 25px 28px);margin:15px 0 13px;touch-action:none}.tile{position:absolute;width:256px;height:256px;max-width:none;user-select:none;-webkit-user-drag:none}.pin{position:absolute;left:50%;top:50%;width:23px;height:23px;border:4px solid white;border-radius:100% 100% 100% 0;background:#9057FC;box-shadow:0 3px 8px #0005;transform:translate(-50%,-80%) rotate(-45deg);z-index:3}.pin::after{content:'';position:absolute;inset:4px;border-radius:100%;background:#FFEFFF}.map-notice{position:absolute;z-index:4;left:15px;right:15px;top:45%;text-align:center;padding:12px;background:#19162bdc;border-radius:14px;font-size:13px;line-height:1.5}.zoom{position:absolute;z-index:3;right:9px;top:9px;display:grid;gap:7px}.zoom button{width:32px;height:33px;background:#fff;color:#352851;border-radius:9px;font-size:21px;font-weight:800;box-shadow:0 3px 9px #0003}.attribution{position:absolute;z-index:3;bottom:4px;right:6px;font-size:10px;padding:1px 5px;border-radius:5px;color:#24415A;background:#FFFA}.section-title{font-size:17px;margin:22px 0 11px;font-weight:850}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:11px}.mini{border:1px solid var(--line);border-radius:17px;background:var(--panel);padding:15px;min-height:108px}.mini .icon{font-size:23px;margin-bottom:12px}.mini b{font-size:14px;display:block;margin-bottom:4px}.mini small{color:var(--muted)}.primary,.secondary,.danger,.outline{border-radius:15px;padding:13px 17px;font-size:14px;font-weight:800;line-height:1.45;display:inline-block;text-align:center}.primary{background:linear-gradient(100deg,#8D5AF3,#D770C4);box-shadow:0 8px 22px #6A38CD4D;color:white}.secondary{background:#47355F}.danger{background:#7D344A}.outline{border:1px solid #9A75D6;background:transparent}.full{width:100%}.small{font-size:12px;padding:10px 12px;border-radius:12px}.btn-row{display:flex;gap:9px;margin-top:11px}.btn-row button{flex:1}.field{display:flex;flex-direction:column;gap:7px;margin:12px 0;color:var(--muted);font-size:13px}.field input{width:100%;padding:15px 14px;border-radius:13px;outline:0;background:#2F254A;color:#fff;border:1px solid #5A4976;font-size:15px}.field input:focus{border-color:#C08DFA;box-shadow:0 0 0 2px #AE7EFB2A}.field input::placeholder{color:#9D8CB8}.eyebrow{color:var(--pink);font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:1.1px}.welcome{padding-top:13vh}.logo{display:flex;width:75px;height:75px;align-items:center;justify-content:center;font-size:36px;border-radius:24px;background:linear-gradient(135deg,#6538CE,#EF78B0);box-shadow:0 9px 35px #7B37DA55;margin-bottom:20px}.headline{font-size:31px;font-weight:900;line-height:1.28;letter-spacing:-.6px}.glow{color:#F89BCC}.auth-form{margin-top:23px}.nav{position:fixed;z-index:10;max-width:600px;left:50%;transform:translateX(-50%);right:0;bottom:0;width:100%;background:#201832F5;box-shadow:0 -8px 24px #100A244A;border-top:1px solid #4B385E;display:flex;justify-content:space-around;padding:12px 8px max(16px,env(safe-area-inset-bottom))}.nav button{background:transparent;color:#AD9ABF;font-size:10px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px;min-width:58px}.nav button .ico{font-size:24px}.nav button.active{color:var(--pink);font-weight:900}.hidden{display:none!important}.separator{border:0;border-top:1px solid var(--line);margin:17px 0}.pair-code{font-weight:900;letter-spacing:5px;text-align:center;background:#34234F;border:1px dashed #B78BF0;border-radius:15px;padding:18px 8px;margin:12px 0;font-size:26px;color:#FCB2D4;user-select:text}.list-item{display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid #45375E}.list-item:last-child{border:0}.dot{height:13px;width:13px;background:#BA87FF;border:3px solid #F4EFFF;border-radius:50%;flex:none}.row-grow{flex:1}.wrap{overflow-wrap:anywhere}.pill{display:inline-block;padding:6px 10px;background:#3C2A55;color:#DABAF8;border-radius:50px;font-weight:800;font-size:12px}.toggle{width:57px;height:34px;border-radius:20px;background:#59476D;position:relative;transition:.2s;flex:none}.toggle::after{content:'';position:absolute;height:26px;width:26px;top:4px;left:4px;border-radius:100%;background:white;transition:.2s}.toggle.on{background:#8E67E8}.toggle.on::after{left:27px}.toast{position:fixed;left:25px;right:25px;bottom:93px;z-index:20;max-width:530px;margin:auto;text-align:center;background:#EEE5FA;color:#26163F;padding:13px 17px;border-radius:14px;box-shadow:0 8px 36px #0009;font-size:13px;font-weight:750;line-height:1.5}.action-note{font-size:12px;color:var(--muted);margin-top:10px;line-height:1.6}.loader{width:22px;height:22px;border:3px solid #fff4;border-top:3px solid #fff;border-radius:50%;animation:spin .8s linear infinite;display:inline-block}@keyframes spin{to{transform:rotate(360deg)}}.link{color:#F9A4D4;background:transparent;padding:4px;border:0;text-decoration:underline}.heading-2{font-size:22px;font-weight:850;margin:7px 0 11px}.preview-banner{padding:9px;background:#7D4B19;border-radius:10px;text-align:center;font-size:12px;font-weight:800;margin-bottom:13px}.story{display:flex;gap:10px;align-items:flex-start}.story .icon{font-size:25px}.foot-note{margin-top:23px;color:#8F80AC;font-size:11px;text-align:center}
+
+/* Together Romantic Edition — accessible purple/pink luxury visual system */
+:root{--bg:#110F23;--panel:#251A40;--panel2:#34244F;--line:#5B416F;--ink:#FFF8FF;--muted:#CDBFE3;--pink:#FF9EC9;--purple:#A275FF;--mint:#70ECC0}
+body{background:radial-gradient(ellipse at 20% 0%,#39225A 0%,transparent 42%),#100D22}
+.page{position:relative;background:radial-gradient(circle at 86% 5%,#47235B88,transparent 30%),radial-gradient(circle at 4% 22%,#47227655,transparent 35%),#110F23;padding-top:24px}
+.page:before{content:"";position:absolute;pointer-events:none;top:10px;right:16px;width:120px;height:120px;background:radial-gradient(circle,#F3A4D52B 2px,transparent 4px) 0 0/23px 23px;opacity:.4}
+.brand{font-size:29px;letter-spacing:-1.2px;background:linear-gradient(105deg,#fff 10%,#FBB0D9 95%);color:transparent;background-clip:text;-webkit-background-clip:text}
+.brand .heart{color:#FF98C6;-webkit-text-fill-color:#FF98C6;filter:drop-shadow(0 0 8px #ED91DB)}
+.header{margin-bottom:19px;position:relative}.round-icon{border:1px solid #A477C144;box-shadow:inset 0 0 0 1px #E7A9FF15;color:#FFB1D9;background:linear-gradient(130deg,#493365,#312144);transform:rotate(-7deg)}
+.hero{position:relative;overflow:hidden;border:1px solid #B17AC166;border-radius:27px;background:linear-gradient(145deg,#543466 0%,#322148 44%,#1D1936 100%);box-shadow:0 20px 55px #08041C85, inset 0 1px 0 #FFFFFF26}
+.hero:before{content:'♥';position:absolute;top:-56px;right:-8px;font-size:190px;color:#FF8FC40C;pointer-events:none;transform:rotate(-16deg)}
+.hero-top,.map,.flex,.btn-row{position:relative}.avatar{width:56px;height:56px;border-radius:20px;background:linear-gradient(135deg,#A677FF,#F78ABA);box-shadow:0 0 0 4px #ffffff18,0 7px 22px #D479DB45;font-size:30px;animation:pulseRomantic 3.3s ease-in-out infinite}
+.partner-name{font-size:20px}.pill{border:1px solid #AA79CE66;box-shadow:inset 0 1px 0 #FFFFFF0D;background:#422B5A;color:#F9C3E6}
+.map{height:293px;border:2px solid #D3A4E357;box-shadow:0 13px 26px #13062070;background:#e9e2eb}
+.primary{background:linear-gradient(110deg,#8354F2 0%,#AA67F6 42%,#F28BB8 100%);box-shadow:0 10px 25px #C45CDB4D, inset 0 1px 0 #FFFFFF5A;border:1px solid #F8CEEB42}
+.primary:active{transform:scale(.985)}.secondary{background:linear-gradient(120deg,#513963,#443157)}
+.card{border:1px solid #765A9466;background:linear-gradient(153deg,#302144,#231B3A);box-shadow:inset 0 1px 0 #FFFFFF0D,0 8px 20px #0D092840}
+.mini{background:linear-gradient(145deg,#31234C,#241C3C);border:1px solid #6C518655;box-shadow:inset 0 1px 0 #FFFFFF16}.mini .icon{color:#FFBBDE}
+.eyebrow{color:#FFC1E0}.welcome{padding-top:7vh;position:relative}.welcome:before{content:"♥";position:absolute;top:-28px;right:0;color:#FCA8D412;font-size:165px;transform:rotate(-17deg);pointer-events:none}
+.logo{height:94px;width:94px;border-radius:33px;background:linear-gradient(135deg,#7850DB,#BD6CE4 46%,#F68EAE);box-shadow:0 14px 40px #F183C455,0 0 0 8px #A867F217;animation:pulseRomantic 3s ease-in-out infinite;font-size:49px}
+.headline{font-size:35px;line-height:1.32}.glow{filter:drop-shadow(0 0 8px #E976B67A)}
+.field input{border-color:#84619999;background:#332446}.field input:focus{border-color:#F6A2D3;box-shadow:0 0 0 3px #EE8DCC24}
+.nav{background:#201832F5;backdrop-filter:blur(16px);border-top:1px solid #F69FD044;box-shadow:0 -8px 29px #10051D55}
+.nav button.active{color:#FFADD6}.nav button.active .ico{filter:drop-shadow(0 0 7px #ED98D8)}
+.splash{position:fixed;inset:0;z-index:99999;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 37%,#533477 0%,#211734 43%,#100D22 78%);color:#fff;transition:opacity .7s ease,visibility .7s ease}.splash.done{opacity:0;visibility:hidden;pointer-events:none}
+.splash-art{height:180px;width:180px;position:relative;display:flex;align-items:center;justify-content:center}.splash-halo{position:absolute;inset:13px;border:1px solid #FFC4E071;border-radius:50%;box-shadow:0 0 0 17px #E896FF10,0 0 0 36px #E896FF08;animation:halo 2s ease-in-out infinite}
+.splash-heart{font-size:85px;line-height:1;color:#FF9FCB;filter:drop-shadow(0 9px 24px #E658BB78);animation:heartBeat 1.8s ease-in-out infinite}
+.tiny-heart{position:absolute;color:#FFD5E9;opacity:.85;animation:floatHeart 2.5s ease-in-out infinite}.th1{top:10px;left:21px;font-size:18px}.th2{right:13px;top:39px;font-size:13px;animation-delay:.6s}.th3{bottom:17px;right:30px;font-size:15px;animation-delay:1s}
+.splash-title{font-size:43px;font-weight:900;letter-spacing:-1.6px;margin-top:6px}.splash-title span{color:#FF9FCB;font-size:27px;margin-left:5px}.splash-subtitle{color:#EDD5F0;font-size:15px;margin-top:7px}
+.splash-loading{width:129px;height:4px;border-radius:20px;background:#ffffff24;margin-top:43px;overflow:hidden}.splash-loading i{height:100%;width:45%;display:block;border-radius:20px;background:linear-gradient(90deg,#AF8CFA,#FF9FCB);animation:loadSweep 1.2s ease-in-out infinite}
+.splash-privacy{position:absolute;bottom:38px;font-size:12px;color:#CFB2D9}
+.love-message{display:flex;gap:11px;align-items:center;padding:14px 16px;margin:12px 0 16px;border-radius:20px;border:1px solid #D9A4E63B;background:linear-gradient(110deg,#4B2B604F,#6B335E3B);color:#F7DBEF;font-size:13px;line-height:1.5}
+.love-message .love-symbol{font-size:27px;filter:drop-shadow(0 0 9px #FF9BCB)}
+.pulse-dot{width:8px;height:8px;border-radius:50%;background:#73F4BD;box-shadow:0 0 0 5px #70F1B61B;display:inline-block;animation:blinkRomantic 2.5s infinite}
+@keyframes pulseRomantic{50%{box-shadow:0 0 0 7px #D881DF22,0 11px 31px #D479DB60;transform:scale(1.025)}}
+@keyframes heartBeat{0%,100%{transform:scale(1)}30%{transform:scale(1.1)}45%{transform:scale(1.02)}60%{transform:scale(1.08)}}
+@keyframes halo{50%{transform:scale(1.08);opacity:.65}}@keyframes floatHeart{50%{transform:translateY(-12px);opacity:.45}}@keyframes blinkRomantic{50%{opacity:.5}}@keyframes loadSweep{0%{transform:translateX(-105%)}100%{transform:translateX(350%)}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+</style></head>
+<body>
+<div id="splash" class="splash" aria-label="Together অ্যাপ চালু হচ্ছে">
+  <div class="splash-art"><div class="splash-halo"></div><div class="splash-heart">♥</div><span class="tiny-heart th1">♥</span><span class="tiny-heart th2">♥</span><span class="tiny-heart th3">♥</span></div>
+  <div class="splash-title">Together<span>♥</span></div>
+  <div class="splash-subtitle">দুটি হৃদয় · একটি সুন্দর সংযোগ</div>
+  <div class="splash-loading"><i></i></div>
+  <div class="splash-privacy">🔒 সম্মতি ও গোপনীয়তার সঙ্গে</div>
+</div>
+<main class="page" id="app"></main><div id="bottom" class="nav hidden"></div><div id="toast" class="toast hidden"></div>
+<script>
+'use strict';
+const preview=true;
+window.setTimeout(()=>document.getElementById('splash')?.classList.add('done'),1450);
+let route='login',mode='login',isBusy=false,profile=null,partner=null,history=[],page=0,serviceActive=false,server='',accountPhone='',mapCenter=null,mapZoom=14,historyBusy=false,selectedDay='';
+const app=document.querySelector('#app'),bottom=document.querySelector('#bottom');
+const escapeHtml=s=>String(s??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+const R={};let seq=1;
+function native(method,...args){return new Promise((resolve,reject)=>{
+  if(preview){return resolve({});}
+  if(!window.TogetherNative){return reject(Error('শুধু Android অ্যাপ থেকে এই ফিচার ব্যবহার করা যাবে'));}
+  const id=String(seq++);R[id]={resolve,reject};
+  try{TogetherNative[method](id,...args);}catch(e){delete R[id];reject(e);}
+});}
+window.nativeReply=(id,ok,json)=>{
+ const cb=R[id];if(!cb)return;delete R[id];
+ let o;try{o=JSON.parse(json);}catch{o={error:'ভুল সার্ভার ডেটা'};}
+ ok?cb.resolve(o):cb.reject(Error(o.error||'অনুরোধ ব্যর্থ'));
+};
+async function api(method,path,data){
+ if(preview){
+  if(path==='/health')return {ok:true};
+  if(path==='/v1/partner')return {paired:true,name:'Demo Partner',sharing:true,location:{latitude:23.7806,longitude:90.4070,accuracy_m:15,received_at:new Date().toISOString()}};
+  if(path==='/v1/me')return {user:{name:'Demo User',sharing:true},paired:true,partner:{name:'Demo Partner',sharing:true}};
+  if(path.startsWith('/v1/history'))return {history:[],hasMore:false};
+  return {ok:true};
+ }
+ return native('call',method,path,data?JSON.stringify(data):'');
+}
+function notify(msg){const t=document.querySelector('#toast');t.textContent=msg;t.classList.remove('hidden');clearTimeout(notify.timer);notify.timer=setTimeout(()=>t.classList.add('hidden'),3500)}
+function timeAgo(t){if(!t)return 'আপডেট নেই';const sec=Math.max(0,Math.round((Date.now()-new Date(t).getTime())/1000));if(!Number.isFinite(sec))return 'সময় অজানা';if(sec<60)return sec+' সেকেন্ড আগে';if(sec<3600)return Math.floor(sec/60)+' মিনিট আগে';if(sec<86400)return Math.floor(sec/3600)+' ঘণ্টা আগে';return Math.floor(sec/86400)+' দিন আগে'}
+function header(heading='Together'){return `<header class="header"><div><div class="brand">${escapeHtml(heading)} <span class="heart">♥</span></div><div class="minor">Always connected, with consent</div></div><div class="round-icon">♡</div></header>${preview?'<div class="preview-banner">শুধু ডিজাইন প্রিভিউ — লাইভ লোকেশন নয়</div>':''}`;}
+function navigation(){bottom.classList.remove('hidden');bottom.innerHTML=[['home','⌂','হোম'],['history','◷','হিস্ট্রি'],['connect','♡','কানেক্ট'],['settings','⚙','সেটিংস']].map(([id,ico,title])=>`<button class="${route===id?'active':''}" data-nav="${id}"><span class="ico">${ico}</span>${title}</button>`).join('');}
+function render(){
+ if(route==='login')return renderAuth();
+ navigation();
+ if(route==='home')renderHome();
+ else if(route==='connect')renderConnect();
+ else if(route==='history')renderHistory();
+ else if(route==='settings')renderSettings();
+}
+function renderAuth(){bottom.classList.add('hidden');
+ app.innerHTML=`<section class="welcome"><div class="logo">♡</div><div class="eyebrow">COUPLE LOCATION SHARING</div><div class="headline">Together <span class="glow">♥</span><br>দূরে থেকেও পাশে</div><p class="hint">যেখানেই থাকুন, ভালোবাসার মানুষটি থাকুক আপনার কাছে—নিজের অনুমতিতে নিরাপদ GPS শেয়ারিং।</p><div class="love-message"><span class="love-symbol">❣</span><span>তুমি যেখানে, আমার ভালোবাসাও সেখানে।<br><small>শুধু দুজনের ব্যক্তিগত কানেকশন</small></span></div>
+ <form id="authForm" class="auth-form"><div class="pill">${mode==='login'?'লগইন করুন':'নতুন অ্যাকাউন্ট'}</div>
+ ${mode==='register'?'<label class="field">আপনার নাম<input required minlength="2" maxlength="80" name="name" placeholder="আপনার নাম" autocomplete="name"></label>':''}
+ <label class="field">মোবাইল নম্বর<input name="phone" required inputmode="tel" type="tel" placeholder="017XXXXXXXX" autocomplete="tel"></label>
+ <label class="field">পাসওয়ার্ড<input name="password" required type="password" minlength="8" placeholder="কমপক্ষে ৮ অক্ষর" autocomplete="${mode==='login'?'current-password':'new-password'}"></label>
+ <button class="primary full" type="submit">${mode==='login'?'লগইন':'অ্যাকাউন্ট খুলুন'} →</button></form>
+ <p class="hint" style="text-align:center"><button class="link" id="switchMode">${mode==='login'?'নতুন অ্যাকাউন্ট তৈরি করুন':'আগের অ্যাকাউন্টে লগইন করুন'}</button></p>
+ <div class="card"><b>সার্ভার সংযোগ</b><div class="label" style="margin-top:7px">আপনার HTTPS সার্ভার ঠিকানা</div><label class="field"><input id="serverInput" value="${escapeHtml(server)}" placeholder="https://your-app.onrender.com" autocapitalize="none" spellcheck="false"></label><div class="btn-row"><button id="setServer" class="secondary small">সার্ভার ঠিকানা সংরক্ষণ</button><button id="testServer" class="outline small">✓ কানেকশন টেস্ট</button></div></div>
+ <p class="foot-note">🔒 লোকেশন শেয়ারিং সর্বদা আপনার অনুমতি সাপেক্ষে।</p></section>`;
+ document.querySelector('#switchMode').onclick=()=>{mode=mode==='login'?'register':'login';renderAuth()};
+ document.querySelector('#setServer').onclick=async()=>{try{const v=document.querySelector('#serverInput').value.trim();await native('setServer',v);server=v;notify('সার্ভার ঠিকানা সংরক্ষিত হয়েছে');}catch(e){notify(e.message)}};
+ document.querySelector('#testServer').onclick=async()=>{try{const j=await api('GET','/health');notify(j.ok?'✓ সার্ভার কানেক্টেড — ব্যবহার করতে পারবেন':'সার্ভার উত্তর সঠিক নয়')}catch(e){notify('সার্ভার কানেকশন ব্যর্থ: '+e.message)}};
+ document.querySelector('#authForm').onsubmit=async e=>{
+  e.preventDefault();if(isBusy)return;isBusy=true;
+  const f=new FormData(e.currentTarget);const p={phone:String(f.get('phone')).trim(),password:String(f.get('password'))};if(mode==='register')p.name=String(f.get('name')).trim();
+  try{await api('POST','/v1/auth/'+(mode==='register'?'register':'login'),p);await loadHome();}
+  catch(err){notify(err.message)}finally{isBusy=false;}
+ };
+}
+function renderHome(){
+ const paired=partner?.paired,shared=!!profile?.user?.sharing,online=paired&&partner.sharing&&partner.location&&Date.now()-Date.parse(partner.location.received_at)<45000;
+ const status=!paired?'এখনো যুক্ত নয়':!partner.sharing?'সঙ্গীর শেয়ারিং বন্ধ':online?'লাইভ লোকেশন চালু':partner.location?'সর্বশেষ পাওয়া লোকেশন':'লোকেশন আসেনি';
+ app.innerHTML=header()+`<div class="love-message"><span class="love-symbol">♥</span><span>${paired?'দূরত্ব যাই হোক, ভালোবাসার সংযোগ অটুট।':'আপনার প্রিয়জনের সঙ্গে নিরাপদে যুক্ত হোন।'}</span><span style="margin-left:auto">${online?'<span class="pulse-dot"></span>':'♡'}</span></div><div class="hero">
+ <div class="hero-top"><div class="story"><div class="avatar">♥</div><div><div class="partner-name">${escapeHtml(paired?partner.name:'My Partner')}</div><div class="status ${online?'':'off'}">● ${escapeHtml(status)}</div></div></div><span class="pill">${paired?'CONNECTED':'NOT PAIRED'}</span></div>
+ <div id="map" class="map"><div class="map-notice" id="mapNotice">${paired?partner.sharing?'লোকেশন পাওয়া গেলে এখানে দেখাবে':'সঙ্গীর শেয়ারিং বর্তমানে বন্ধ':'কানেক্ট পেজ থেকে দুজনকে যুক্ত করুন'}</div><div class="zoom"><button id="zoomPlus">+</button><button id="zoomMinus">−</button></div><div class="attribution">© OpenStreetMap contributors</div></div>
+ <div class="flex"><div><div class="label">সর্বশেষ লোকেশন</div><b id="lastSeen">${escapeHtml(timeAgo(partner?.location?.received_at))}</b></div><div><div class="label">GPS নির্ভুলতা</div><b>${partner?.location?Math.round(partner.location.accuracy_m)+' মিটার':'—'}</b></div></div>
+ <div class="btn-row"><button class="primary" id="refreshBtn">↻ আপডেট</button><button class="secondary" id="openMap">↗ ম্যাপ খুলুন</button></div></div>
+ <div class="section-title">আপনার শেয়ারিং</div><div class="card"><div class="flex"><div><b>${shared?'লোকেশন শেয়ার চালু':'লোকেশন শেয়ার বন্ধ'}</b><div class="hint">সঙ্গীকে আপনার GPS অবস্থান পাঠানো ${shared?'অন':'অফ'}</div></div><div class="toggle ${shared?'on':''}"></div></div>
+ <div class="btn-row"><button id="startBtn" class="primary" ${!paired?'disabled':''}>${shared?'▶ সার্ভিস আবার চালু করুন':'▶ শেয়ারিং চালু করুন'}</button><button id="stopBtn" class="danger">■ বন্ধ করুন</button></div><p class="action-note">শুধু আপনার সম্মতিতে চলবে। সক্রিয় থাকলে ফোনে দৃশ্যমান নোটিফিকেশন থাকবে। বন্ধ করলে নতুন GPS পাঠানো হবে না।</p></div>
+ <div class="grid2"><div class="mini"><div class="icon">◷</div><b>৩০ দিনের হিস্ট্রি</b><small>অনুমোদিত সঙ্গীর রেকর্ড</small></div><div class="mini"><div class="icon">♧</div><b>Privacy First</b><small>যেকোনো সময় শেয়ার বন্ধ</small></div></div>`;
+ document.querySelector('#refreshBtn').onclick=refreshPartner;
+ document.querySelector('#startBtn').onclick=startSharing;
+ document.querySelector('#stopBtn').onclick=stopSharing;
+ document.querySelector('#openMap').onclick=()=>{if(partner?.location){notify('ম্যাপের + / − ও আঙুল দিয়ে সরিয়ে দেখতে পারবেন')}else notify('এখনো লোকেশন পাওয়া যায়নি')};
+ drawMap(partner?.sharing?partner?.location:null);
+}
+function drawMap(loc){const map=document.querySelector('#map');if(!map)return;
+ const old=map.querySelectorAll('.tile,.pin');old.forEach(e=>e.remove());
+ document.querySelector('#zoomPlus').onclick=()=>{mapZoom=Math.min(18,mapZoom+1);drawMap(loc)};
+ document.querySelector('#zoomMinus').onclick=()=>{mapZoom=Math.max(3,mapZoom-1);drawMap(loc)};
+ if(!loc)return;
+ const notice=document.querySelector('#mapNotice');if(notice)notice.remove();
+ const center=mapCenter||{lat:Number(loc.latitude),lon:Number(loc.longitude)};
+ const z=mapZoom,n=Math.pow(2,z),lat=Math.max(-85.051128,Math.min(85.051128,center.lat));
+ const x=(center.lon+180)/360*n*256,y=(1-Math.asinh(Math.tan(lat*Math.PI/180))/Math.PI)/2*n*256;
+ const w=map.clientWidth||300,h=map.clientHeight||272;
+ for(let tx=Math.floor((x-w/2)/256);tx<=Math.floor((x+w/2)/256);tx++)for(let ty=Math.floor((y-h/2)/256);ty<=Math.floor((y+h/2)/256);ty++){
+  if(ty<0||ty>=n)continue;
+  const im=document.createElement('img');im.className='tile';im.alt='';im.draggable=false;
+  im.src=`https://tile.openstreetmap.org/${z}/${((tx%n)+n)%n}/${ty}.png`;
+  im.style.left=(tx*256-(x-w/2))+'px';im.style.top=(ty*256-(y-h/2))+'px';
+  map.insertBefore(im,map.firstChild);
+ }
+ const llx=(Number(loc.longitude)+180)/360*n*256;
+ const lly=(1-Math.asinh(Math.tan(Math.max(-85.051128,Math.min(85.051128,Number(loc.latitude)))*Math.PI/180))/Math.PI)/2*n*256;
+ const pin=document.createElement('div');pin.className='pin';pin.style.left=(llx-(x-w/2))+'px';pin.style.top=(lly-(y-h/2))+'px';map.appendChild(pin);
+ let start=null;
+ map.onpointerdown=e=>{if(e.target.tagName==='BUTTON')return;start={px:e.clientX,py:e.clientY,x,y};map.setPointerCapture(e.pointerId)};
+ map.onpointerup=e=>{if(!start)return;
+  const px=start.x-(e.clientX-start.px),py=start.y-(e.clientY-start.py);
+  mapCenter={lat:Math.atan(Math.sinh(Math.PI*(1-2*py/(n*256))))*180/Math.PI,lon:px/(n*256)*360-180};start=null;drawMap(loc);
+ };
+}
+async function refreshPartner(){if(route!=='home')return;try{partner=await api('GET','/v1/partner');profile=await api('GET','/v1/me');renderHome()}catch(e){notify(e.message)}}
+async function loadHome(){try{profile=await api('GET','/v1/me');partner=await api('GET','/v1/partner');route='home';mapCenter=null;render()}catch(e){notify(e.message);route='login';render()}}
+async function startSharing(){if(isBusy)return;isBusy=true;
+ try{
+  if(!profile?.paired)throw Error('প্রথমে দুজনকে যুক্ত করুন');
+  await native('startShare');
+  try{await api('POST','/v1/privacy/sharing',{enabled:true});}
+  catch(err){await native('stopShare');throw err;}
+  serviceActive=true;profile.user.sharing=true;render();notify('লোকেশন শেয়ারিং শুরু হয়েছে');
+ }catch(e){notify(e.message)}finally{isBusy=false}
+}
+async function stopSharing(){if(isBusy)return;isBusy=true;
+ try{
+  await native('stopShare');serviceActive=false;
+  await api('POST','/v1/privacy/sharing',{enabled:false});
+  profile.user.sharing=false;render();notify('লোকেশন শেয়ারিং বন্ধ হয়েছে');
+ }catch(e){notify('ফোনে শেয়ার বন্ধ; সার্ভারে সংযোগ যাচাই করুন: '+e.message);try{profile=await api('GET','/v1/me')}catch{}render()}finally{isBusy=false}
+}
+function renderConnect(){
+ app.innerHTML=header()+`<div class="eyebrow">PRIVATE CONNECTION</div><div class="heading-2">আপনার সঙ্গীর সঙ্গে যুক্ত হন</div>
+ <div class="card">${profile?.paired?`<div class="story"><div class="avatar">♥</div><div><b>কানেক্টেড</b><div class="hint">${escapeHtml(profile.partner?.name||partner?.name)}</div></div></div><p class="hint">দুজনের অ্যাকাউন্ট এখন সংযুক্ত। প্রত্যেকে নিজে লোকেশন শেয়ার চালু করবেন।</p><button class="danger full" id="disconnect">Couple Disconnect</button>`:
+ `<p class="hint">একজন ১০ অক্ষরের ইনভাইট কোড তৈরি করুন। অন্যজনের ফোনে কোডটি লিখে যুক্ত করুন। কোডের মেয়াদ ১০ মিনিট।</p><button class="primary full" id="inviteBtn">♡ নতুন ইনভাইট কোড তৈরি</button><div id="codeResult"></div><button class="outline full hidden" id="shareCode">↗ সঙ্গীকে কোড পাঠান</button><hr class="separator"><label class="field">সঙ্গীর ইনভাইট কোড<input id="inviteInput" maxlength="10" style="text-transform:uppercase" placeholder="ABCDEFGHIJ" autocapitalize="characters"></label><button class="secondary full" id="acceptBtn">কোড দিয়ে কানেক্ট করুন →</button>`}</div><div class="card"><div class="story"><div class="icon">🔐</div><div><b>শুধু দুজনের জন্য</b><p class="hint" style="margin-top:4px">একজন কেবল একজনের সঙ্গে যুক্ত থাকতে পারবেন। সংযোগ বিচ্ছিন্ন করলে পুরোনো সঙ্গী আর লোকেশন পড়তে পারবেন না।</p></div></div></div>`;
+ if(profile?.paired){document.querySelector('#disconnect').onclick=async()=>{
+  if(!confirm('সঙ্গীর সঙ্গে সংযোগ বিচ্ছিন্ন করবেন?'))return;
+  try{await native('stopShare');await api('POST','/v1/pair/disconnect',{});await loadHome();notify('সংযোগ বিচ্ছিন্ন হয়েছে')}catch(e){notify(e.message)}
+ };return}
+ document.querySelector('#inviteBtn').onclick=async()=>{try{const j=await api('POST','/v1/pair/invite',{});document.querySelector('#codeResult').innerHTML=`<div class="pair-code">${escapeHtml(j.code||'')}</div><div class="hint">১০ মিনিটের মধ্যে সঙ্গীর ফোনে কোডটি দিন।</div>`;const shareBtn=document.querySelector('#shareCode');shareBtn.classList.remove('hidden');shareBtn.onclick=async()=>{try{await native('shareInvite',j.code)}catch(e){notify(e.message)}};}catch(e){notify(e.message)}};
+ document.querySelector('#acceptBtn').onclick=async()=>{const code=document.querySelector('#inviteInput').value.toUpperCase().trim();try{await api('POST','/v1/pair/accept',{code});await loadHome();notify('Couple Connect সফল হয়েছে')}catch(e){notify(e.message)}};
+}
+function renderHistory(){
+ app.innerHTML=header()+`<div class="eyebrow">LOCATION HISTORY</div><div class="heading-2">গত ৩০ দিনের লোকেশন</div>
+ <p class="hint">শুধু সঙ্গী শেয়ারিং চালু রাখলে তার অনুমোদিত লোকেশন হিস্ট্রি দেখা যাবে। সার্ভার স্বয়ংক্রিয়ভাবে ৩০ দিনের বেশি পুরোনো তথ্য মুছে দেয়।</p>
+ <div class="card"><label class="field">একটি দিন নির্বাচন করুন (ঐচ্ছিক)<input type="date" id="historyDay" value="${escapeHtml(selectedDay)}"></label><div id="historyList">${history.length?history.map((h,i)=>historyItem(h,i)).join(''):'<div class="hint">হিস্ট্রি দেখতে নিচের বাটন চাপুন।</div>'}</div><button id="moreHistory" class="secondary full" style="margin-top:14px">${history.length?'আরও পুরোনো দেখুন':'হিস্ট্রি লোড করুন'}</button></div>`;
+ document.querySelector('#moreHistory').onclick=loadHistory;
+ document.querySelector('#historyDay').onchange=e=>{selectedDay=e.target.value;history=[];page=0;renderHistory();loadHistory()};
+ document.querySelectorAll('[data-hidx]').forEach(e=>e.onclick=()=>{
+  const h=history[Number(e.dataset.hidx)];if(!h)return;
+  const geo=`geo:${h.latitude},${h.longitude}?q=${h.latitude},${h.longitude}`;
+  notify('অবস্থান: '+Number(h.latitude).toFixed(5)+', '+Number(h.longitude).toFixed(5));
+ });
+}
+function historyItem(h,i){return `<div class="list-item" data-hidx="${i}"><div class="dot"></div><div class="row-grow"><b>${escapeHtml(new Date(h.received_at).toLocaleString('bn-BD'))}</b><div class="hint">${Number(h.latitude).toFixed(5)}, ${Number(h.longitude).toFixed(5)}</div></div><div class="label">±${Math.round(h.accuracy_m)} মি.</div></div>`;}
+async function loadHistory(){if(historyBusy)return;historyBusy=true;
+ try{const r=await api('GET','/v1/history?page='+page+(selectedDay?'&date='+selectedDay:''));history.push(...(r.history||[]));page++;renderHistory();if(!r.hasMore)document.querySelector('#moreHistory').classList.add('hidden');if(!r.history?.length)notify('এই সময়ের কোনো রেকর্ড নেই');}
+ catch(e){notify(e.message)}finally{historyBusy=false}
+}
+function renderSettings(){
+ app.innerHTML=header()+`<div class="eyebrow">MY PRIVACY SETTINGS</div><div class="heading-2">আপনার অ্যাকাউন্ট</div>
+ <div class="card"><b>${escapeHtml(profile?.user?.name||'My Account')}</b><div class="hint">${escapeHtml(profile?.user?.phone||'')}</div><hr class="separator"><div class="flex"><div><b>লোকেশন শেয়ারিং</b><p class="hint">${profile?.user?.sharing?'বর্তমানে সার্ভারে চালু':'বর্তমানে সার্ভারে বন্ধ'}</p></div><span class="pill">${profile?.user?.sharing?'ON':'OFF'}</span></div></div>
+ <div class="card"><b>ডেটা ও নিয়ন্ত্রণ</b><p class="hint">লোকেশন আপডেটের লক্ষ্য ১০–১৫ সেকেন্ড। ডেটা সর্বোচ্চ ৩০ দিন সংরক্ষিত থাকবে। Android ও ইন্টারনেটের কারণে আপডেট দেরি হতে পারে।</p><p class="hint">এই সার্ভার: <span class="wrap">${escapeHtml(server)}</span></p><button class="outline full" id="wipe">আমার সব লোকেশন হিস্ট্রি মুছুন</button><div style="height:12px"></div><button class="danger full" id="accountDelete">অ্যাকাউন্ট স্থায়ীভাবে মুছুন</button></div>
+ <div class="card"><b>শেয়ারিং নীতি</b><p class="hint">লোকেশন অনুমতি, চলমান নোটিফিকেশন এবং শেয়ারিং বন্ধ করার নিয়ন্ত্রণ সর্বদা আপনার হাতে থাকবে। অ্যাপ কাউকে গোপনে ট্র্যাক করে না।</p></div>
+ <button class="secondary full" id="logoutBtn">লগআউট করুন</button>`;
+ document.querySelector('#wipe').onclick=async()=>{if(!confirm('আপনার নিজের সব লোকেশন রেকর্ড মুছতে চান?'))return;try{await api('DELETE','/v1/history/me');notify('নিজের হিস্ট্রি মুছে দেওয়া হয়েছে')}catch(e){notify(e.message)}};
+ document.querySelector('#accountDelete').onclick=async()=>{if(!confirm('অ্যাকাউন্ট স্থায়ীভাবে মুছবেন? এটি আর ফেরানো যাবে না।'))return;
+ try{await native('stopShare');await api('DELETE','/v1/account');await native('logout');route='login';profile=null;partner=null;render();notify('অ্যাকাউন্ট মুছে দেওয়া হয়েছে')}
+ catch(e){notify(e.message)}
+ };
+ document.querySelector('#logoutBtn').onclick=async()=>{
+  if(!confirm('লগআউট করলে লোকেশন শেয়ারিং বন্ধ হবে। চালিয়ে যেতে চান?'))return;
+  try{await native('stopShare');await api('POST','/v1/privacy/sharing',{enabled:false});await native('logout');profile=null;partner=null;route='login';render();notify('লগআউট সফল')}
+  catch(e){notify('সার্ভারে শেয়ারিং বন্ধ নিশ্চিত হয়নি: '+e.message);}
+ };
+}
+window.onAndroidBack=()=>{if(route==='login')return;route='home';render()};
+bottom.addEventListener('click',e=>{let b=e.target.closest('button[data-nav]');if(!b)return;route=b.dataset.nav;if(route==='history'){history=[];page=0;selectedDay='';}render()});
+(async function init(){
+ if(preview){server='https://preview.example';profile=(await api('GET','/v1/me'));partner=(await api('GET','/v1/partner'));route='home';render();return;}
+ try{
+  const c=await native('config');server=c.server;serviceActive=!!c.serviceActive;
+  if(c.loggedIn && server){await loadHome();return;}
+ }catch(e){notify(e.message)}route='login';renderAuth();
+})();
+setInterval(async()=>{if(route!=='home'||preview)return;try{partner=await api('GET','/v1/partner');profile=await api('GET','/v1/me');renderHome()}catch{}},15000);
+</script></body></html>

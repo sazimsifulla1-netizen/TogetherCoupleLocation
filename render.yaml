@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: together-couple-api
+    runtime: node
+    rootDir: server
+    buildCommand: npm install --omit=dev
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        sync: false
+      - key: DB_SSL
+        value: 'true'
+      - key: JWT_SECRET
+        generateValue: true
+      - key: INVITE_SECRET
+        generateValue: true

@@ -1,0 +1,41 @@
+CREATE TABLE IF NOT EXISTS users (
+  id UUID PRIMARY KEY,
+  name VARCHAR(80) NOT NULL,
+  phone VARCHAR(20) NOT NULL UNIQUE,
+  password_hash TEXT NOT NULL,
+  sharing_enabled BOOLEAN NOT NULL DEFAULT FALSE,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+CREATE TABLE IF NOT EXISTS couples (
+  id UUID PRIMARY KEY,
+  member_a UUID NOT NULL UNIQUE REFERENCES users(id) ON DELETE CASCADE,
+  member_b UUID NOT NULL UNIQUE REFERENCES users(id) ON DELETE CASCADE,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  CONSTRAINT distinct_couple_members CHECK (member_a <> member_b)
+);
+CREATE TABLE IF NOT EXISTS invites (
+  code_hash CHAR(64) PRIMARY KEY,
+  owner_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  expires_at TIMESTAMPTZ NOT NULL
+);
+CREATE INDEX IF NOT EXISTS idx_invites_owner ON invites(owner_id);
+CREATE TABLE IF NOT EXISTS locations (
+  id BIGSERIAL PRIMARY KEY,
+  user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  latitude DOUBLE PRECISION NOT NULL CHECK (latitude BETWEEN -90 AND 90),
+  longitude DOUBLE PRECISION NOT NULL CHECK (longitude BETWEEN -180 AND 180),
+  accuracy_m REAL NOT NULL CHECK (accuracy_m BETWEEN 0 AND 50000),
+  gps_time TIMESTAMPTZ NOT NULL,
+  received_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+CREATE INDEX IF NOT EXISTS idx_locations_user_time ON locations(user_id,received_at DESC);
+CREATE INDEX IF NOT EXISTS idx_locations_retention ON locations(received_at);
+
+CREATE TABLE IF NOT EXISTS latest_locations (
+  user_id UUID PRIMARY KEY REFERENCES users(id) ON DELETE CASCADE,
+  latitude DOUBLE PRECISION NOT NULL,
+  longitude DOUBLE PRECISION NOT NULL,
+  accuracy_m REAL NOT NULL,
+  gps_time TIMESTAMPTZ NOT NULL,
+  received_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);

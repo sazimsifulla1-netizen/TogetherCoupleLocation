@@ -1,0 +1,15 @@
+# Never upload private server credentials or local build output
+.env
+**/.env
+!**/.env.example
+node_modules/
+**/node_modules/
+.gradle/
+**/.gradle/
+**/build/
+local.properties
+*.apk
+*.aab
+*.jks
+*.keystore
+.DS_Store
