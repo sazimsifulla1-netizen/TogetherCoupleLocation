@@ -1,4 +1,4 @@
-Package com.together.couple;
+package com.together.couple;
 
 import android.Manifest;
 import android.app.Notification;
