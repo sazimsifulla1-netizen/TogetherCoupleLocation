@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- প্রয়োজনীয় পারমিশনসমূহ -->
+    <!-- প্রয়োজনীয় পারমিশনসমূহ -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -14,11 +14,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="Together Couple"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@android:style/Theme.DeviceDefault.NoActionBar">
 
         <!-- মূল অ্যাক্টিভিটি -->
         <activity
@@ -30,7 +28,7 @@
             </intent-filter>
         </activity>
 
-        <!-- লোকেশন শেয়ারিং সার্ভিস -->
+        <!-- লোকেশন শেয়ারিং সার্ভিস -->
         <service
             android:name=".ShareService"
             android:enabled="true"
