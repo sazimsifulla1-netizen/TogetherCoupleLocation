@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- প্রয়োজনীয় পারমিশনসমূহ -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -18,7 +17,6 @@
         android:supportsRtl="true"
         android:theme="@android:style/Theme.DeviceDefault.NoActionBar">
 
-        <!-- মূল অ্যাক্টিভিটি -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -28,14 +26,12 @@
             </intent-filter>
         </activity>
 
-        <!-- লোকেশন শেয়ারিং সার্ভিস -->
         <service
             android:name=".ShareService"
             android:enabled="true"
             android:exported="false"
             android:foregroundServiceType="location" />
 
-        <!-- ফোন রিবুট রিসিভার -->
         <receiver
             android:name=".BootReceiver"
             android:enabled="true"
@@ -46,7 +42,6 @@
             </intent-filter>
         </receiver>
 
-        <!-- ইন-অ্যাপ অটো আপডেটের জন্য ফাইল প্রোভাইডার -->
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.fileprovider"
